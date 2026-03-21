@@ -1,0 +1,26 @@
+spring:
+
+  application:
+    name: mail-service
+
+  rabbitmq:
+    host: ${SPRING_RABBITMQ_HOST:localhost}
+    port: ${SPRING_RABBITMQ_PORT:5672}
+    username: ${SPRING_RABBITMQ_USERNAME:guest}
+    password: ${SPRING_RABBITMQ_PASSWORD:guest}
+    queue: ${SPRING_RABBITMQ_QUEUE:email}
+
+    listener:
+      simple:
+        concurrency: 3
+        max-concurrency: 10
+        retry:
+          enabled: true
+          max-attempts: 3
+          initial-interval: 5000
+          multiplier: 2.0
+          max-interval: 20000
+
+  mail:
+    from: noreply@q1zin.ru
+    password: re_RVF9PpnJ_NrRiXFeJ3EufqHFsVPuEKmEu

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Подтверждение почты</title>
+</head>
+<body>
+<div style="text-align: center;">
+    <h2>Подтверждение email</h2>
+    <p> Ссылка для подтверждения </p>
+    <a th:href="${verificationLink}" style="background-color: #4CAF50; color: white; padding: 14px 20px; text-align: center; text-decoration: none;">
+        Подтвердить email
+    </a>
+</div>
+</body>
+</html>
