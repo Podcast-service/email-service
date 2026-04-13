@@ -1,11 +1,10 @@
 # Email микросервис
 
 ## Сборка и запуск
-- `./gradlew build`
-- `./gradlew bootRun`
+- `docker compose up --build`
 
 ## Сообщение в RabbitMQ
-Принимает сообщение от RabbitMQ в формате JSON со следующими полями: *type, toEmail, link*
+Принимает сообщение от RabbitMQ в формате JSON со следующими полями: *type, toEmail, code*
 
 ## Шаблоны для писем
 Шаблоны для писем:
