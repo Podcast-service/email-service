@@ -8,5 +8,5 @@
 
 ## Шаблоны для писем
 Шаблоны для писем:
-- Для подтверждения: [verification.html](https://github.com/Podcast-service/email-service/blob/email-service/mail-service/src/main/resources/templates/verification.html)
-- Для восстановления [password-reset.html](https://github.com/Podcast-service/email-service/blob/email-service/mail-service/src/main/resources/templates/password-reset.html)
+- Для подтверждения: [verification.html](./src/main/resources/templates/verification.html)
+- Для восстановления [password-reset.html](./src/main/resources/templates/password-reset.html)
