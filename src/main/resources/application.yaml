@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: ${APP_NAME:email-service}
+
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USERNAME:guest}
+    password: ${RABBITMQ_PASSWORD:guest}
+
+    listener:
+      simple:
+        concurrency: ${RABBITMQ_CONCURRENCY:3}
+        max-concurrency: ${RABBITMQ_MAX_CONCURRENCY:10}
+        retry:
+          enabled: ${RABBITMQ_RETRY_ENABLED:true}
+          max-attempts: ${RABBITMQ_MAX_ATTEMPTS:3}
+          initial-interval: ${RABBITMQ_INITIAL_INTERVAL:5000}
+          multiplier: ${RABBITMQ_MULTIPLIER:2.0}
+          max-interval: ${RABBITMQ_MAX_INTERVAL:20000}
+        default-requeue-rejected: ${RABBITMQ_REQUEUE_REJECTED:false}
+
+  mail:
+    from: ${MAIL_FROM:noreply@q1zin.ru}
+    password: ${MAIL_PASSWORD}
+
+app:
+  rabbitmq:
+    queue: ${RABBITMQ_QUEUE:email.queue}
+
+logging:
+  level:
+    root: ${LOG_LEVEL:INFO}
+    com.emailService: ${APP_LOG_LEVEL:INFO}
