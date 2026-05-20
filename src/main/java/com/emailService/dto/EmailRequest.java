@@ -2,7 +2,7 @@ package com.emailService.dto;
 
 public record EmailRequest (
         RequestType type,
-        String toEmail,
+        String email,
         String code
 ) {
 }
