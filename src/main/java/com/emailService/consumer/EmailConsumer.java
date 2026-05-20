@@ -24,7 +24,7 @@ public class EmailConsumer {
         try {
             log.info("Received email request: type={}, to={}",
                     request != null ? request.type() : null,
-                    request != null ? request.toEmail() : null);
+                    request != null ? request.email() : null);
 
             emailHandler.handle(request);
 

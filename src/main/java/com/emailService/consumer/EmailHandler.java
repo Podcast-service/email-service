@@ -23,13 +23,13 @@ public class EmailHandler {
 
         switch (request.type()) {
             case EMAIL_VERIFY -> emailService.sendMail(
-                    request.toEmail(),
+                    request.email(),
                     "Подтверждение почты",
                     "verification",
                     context
             );
             case PASSWORD_RESET -> emailService.sendMail(
-                    request.toEmail(),
+                    request.email(),
                     "Сброс пароля",
                     "password-reset",
                     context
@@ -46,8 +46,8 @@ public class EmailHandler {
             throw new InvalidEmailRequestException("Request type is null");
         }
 
-        if (!isValidEmail(request.toEmail())) {
-            throw new InvalidEmailRequestException("Invalid email: " + request.toEmail());
+        if (!isValidEmail(request.email())) {
+            throw new InvalidEmailRequestException("Invalid email: " + request.email());
         }
 
         if (request.code() == null || request.code().isBlank()) {
