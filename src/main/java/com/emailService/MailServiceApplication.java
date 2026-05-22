@@ -1,4 +1,4 @@
-package com.example.mail_service;
+package com.emailService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
