@@ -29,7 +29,7 @@ public class EmailController {
     public void listenerRabbit(String message) {
 
         if (message == null || message.isBlank()) {
-            log.error("Received empty message");
+            log.error("Receiveds empty message");
             return;
         }
 
